@@ -1,14 +1,15 @@
-### agenda_telefonica
+# 📱 Agenda Telefónica
 
-##estoy haciendo una agenda simple de telefono.
+Una aplicación simple para gestionar contactos telefónicos.
 
-#esta app tiene 5 modos dentro de 5 funciones.
+## Funcionalidades principales
 
+La app cuenta con 5 modos principales, cada uno implementado como una función:
 
--insertar() #insertar    
+- `insertar()` – Añade un nuevo contacto a la agenda.
+- `eliminar()` – Elimina un contacto existente.
+- `actualizar()` – Actualiza la información de un contacto.
+- `busqueda()` – Busca contactos por nombre o número.
+- `mostrar_todos()` – Muestra todos los contactos guardados. *(opcional pero común)*
 
--eliminar() # eliminar
-
--actualizar() # actualizar contacto
-
--busqueda() # busqueda
+---
