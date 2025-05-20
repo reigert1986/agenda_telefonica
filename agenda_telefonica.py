@@ -8,7 +8,6 @@ def opciones():
     try:
         while True:
             eleccion = int(input("ingrese un numero\n"))
-            print(eleccion)
             return eleccion
     except Exception as e :
             print(f"el error es = {type(e)} {e}")        
@@ -19,8 +18,11 @@ def insertar():
     numeros_tel[nombre] = numero
        
 def eliminar():
-    nombre = input("ingrese el nombre a eliminar: \n") 
-    del numeros_tel[nombre]
+    try:
+        nombre = input("ingrese el nombre a eliminar: \n") 
+        del numeros_tel[nombre]
+    except Exception as e :
+        print(f"el error es = {type(e)} {e}")    
 
 def actualizar():
     print(numeros_tel)
@@ -34,12 +36,15 @@ def busqueda():
     else:
         print("el numero no esta en la agenda.")    
 
+def mostrar_todos():
+    print(numeros_tel)
+
 def main():
-    print("opcion 1: insertar")
-    print("opcion 2: eliminar")
-    print("opcion 3: actualizar contacto")
-    print("opcion 4: busqueda")
-    
+    print("opcion 1: insertar ")
+    print("opcion 2: eliminar ")
+    print("opcion 3: actualizar contacto ")
+    print("opcion 4: busqueda ")
+    print("opcion 5: mostar contactos ")
 
     opc = opciones()
     if opc == 1:
@@ -50,13 +55,14 @@ def main():
         actualizar() # actualizar contacto
     elif opc == 4:
         busqueda() # busqueda
-  
+    elif opc == 5:
+        mostrar_todos()
     else: 
-        print("opcion fuera de rango")
+        print("opcion fuera de rango ")
 
 while True:
     main()
-    escape = input("desea terminar? si o no")
+    escape = input("desea terminar? si o no ")
     if escape == "si":
         break
 
