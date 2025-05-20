@@ -5,19 +5,13 @@ numeros_tel = {
 
 
 def opciones():
-    flag = True
-    
     try:
-        while flag:
+        while True:
             eleccion = int(input("ingrese un numero\n"))
-            if type(eleccion) == int:
-              flag = False
-              print(eleccion)
+            print(eleccion)
             return eleccion
     except Exception as e :
-            print(f"el error es = {type(e)}")
-
-opciones()            
+            print(f"el error es = {type(e)} {e}")        
     
 def insertar():
     nombre = input("ingrese el nombre del contacto: \n")
@@ -60,7 +54,7 @@ def main():
     else: 
         print("opcion fuera de rango")
 
-while False:
+while True:
     main()
     escape = input("desea terminar? si o no")
     if escape == "si":
